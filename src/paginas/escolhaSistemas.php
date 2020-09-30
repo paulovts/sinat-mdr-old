@@ -172,3 +172,4 @@ $codUsuario = $_SESSION['cod_usuario'];
 </script>
 
 </body>
+</html>

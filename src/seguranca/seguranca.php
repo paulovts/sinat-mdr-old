@@ -9,7 +9,7 @@
 * @version 1.0
 * @package SistemaSeguranca
 */
- 
+
 //  Configurações do Script
 // ==============================
 $_SG['conectaServidor'] = true;    // Abre uma conexão com o servidor MySQL?
@@ -34,7 +34,7 @@ $_SG['tabela'] = 'catalogodesempenho.tab_usuario';       // Nome da tabela onde 
 //   ~ Não edite a partir deste ponto ~
 // ======================================
 
-// Verifica se precisa fazer a conexão com o MySQL
+// Verifica se precisa fazer a conexão com o Postgres
 if ($_SG['conectaServidor'] == true) {
 	$_SG['link'] = @pg_connect("dbname=sinat host=192.168.10.113 port=5432 user=postgres password=pg01") or die("PostGreSQL: Não foi possível conectar-se ao servidor [".$_SG['servidor']."].");
 

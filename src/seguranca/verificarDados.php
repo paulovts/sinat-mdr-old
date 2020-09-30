@@ -8,8 +8,7 @@ require_once"../../require/class/CriptografarSenha.class.php";
  $cripto = new CriptografarSenha;
  $usuario = (isset($_GET['usuario'])) ? $_GET['usuario'] : '';
  $senha = (isset($_GET['senha'])) ? $_GET['senha'] : '';
-// Verifica se um formulário foi enviado
-
+    // Verifica se um formulário foi enviado
 	// Salva duas variáveis com o que foi digitado no formulário
 	// Detalhe: faz uma verificação com isset() pra saber se o campo foi preenchido
 
