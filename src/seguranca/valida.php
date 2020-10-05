@@ -3,6 +3,20 @@
 include("seguranca.php");
 require_once "../../require/class/Tab_usuarios.class.php";
 
+class Login
+{
+    public function __construct()
+    {
+        $this->tabUsuario = new Tab_usuarios;
+    }
+
+    public function verificaPerfil($usuario)
+    {
+       return $this->tabUsuarios->consultar_perfil($usuario);
+    }
+}
+
+
 $tabUsuarios = new Tab_usuarios;
 // Verifica se um formulário foi enviado
 if ($_SERVER['REQUEST_METHOD'] == 'GET') {

@@ -1,5 +1,5 @@
 <?php
-require_once"ConDBSnhDhab.class.php"; //require_once"ConDB.class.php"
+require_once "ConDBSnhDhab.class.php"; //require_once"ConDB.class.php"
 
 
 class Tab_usuarios extends ConDBSnhDhab{
@@ -17,7 +17,7 @@ class Tab_usuarios extends ConDBSnhDhab{
 		} catch( PDOExecption $e ) { 
 			return $e->getMessage();
 		} catch( Exception $ex ) { 
-			return $this->pack('dbError', $ex->getMessage()); 
+			return false;
 		}
 	}
 	
@@ -132,8 +132,9 @@ class Tab_usuarios extends ConDBSnhDhab{
 			$statement->bindValue('email',$email,PDO::PARAM_STR);
 			$statement->bindValue('senha',$senha,PDO::PARAM_STR);
 			$statement->execute();
-			
-			return $statement->rowCount();
+
+			return $statement->fetchAll() ? true : false;
+
 		} catch( PDOExecption $e ) { 
 			return $e->getMessage();
 		} catch( Exception $ex ) { 

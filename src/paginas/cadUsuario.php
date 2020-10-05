@@ -44,7 +44,7 @@ $tabArea = new Opc_areaAtuacao;
 <div id='nav' style="position:relative">
     <div class="container">
         <ul>
-            <li><a href="../../index.php">Voltar</a></li>
+            <li><a href="../../public/index.php">Voltar</a></li>
         </ul>
     </div>
 </div>
